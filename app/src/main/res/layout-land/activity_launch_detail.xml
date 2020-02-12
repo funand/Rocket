@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="160dp"
+    android:paddingTop="100dp"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/rocket_img_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/view_orientation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textSize="50sp"
+        android:text="@string/landscape"/>
+
+    <TextView
+        android:id="@+id/mission_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_orientation"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/mission_name" />
+
+    <TextView
+        android:id="@+id/rocket_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mission_name_two"
+        android:text="@string/rocket_name" />
+
+    <TextView
+        android:id="@+id/date_launched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rocket_name_two"
+        android:text="@string/date_launched" />
+
+    <TextView
+        android:id="@+id/regime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_launched"
+        android:text="@string/regime" />
+
+    <TextView
+        android:id="@+id/manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regime"
+        android:text="@string/manufacturer" />
+
+    <TextView
+        android:id="@+id/reference_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manufacturer"
+        android:text="@string/reference_system" />
+
+</RelativeLayout>
