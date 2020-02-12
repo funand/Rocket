@@ -50,7 +50,19 @@ public class MainActivity extends AppCompatActivity implements LaunchAdapter.OnL
     public void onLaunchClick(int position) {
         Intent intent = new Intent(this, LaunchDetail.class);
 
-        intent.putExtra("launch_selected", dataset.get(position));
+        intent.putExtra("image", dataset.get(position).getLinks().getMissionPatchSmall());
+        intent.putExtra("missionName", dataset.get(position).getMissionName());
+        intent.putExtra("rocket", dataset.get(position).getRocket().getRocketName());
+        intent.putExtra("date", dataset.get(position).getLaunchYear());
+
+        intent.putExtra("regime", dataset.get(position).getRocket()
+                .getSecondStage().getPayloads().get(0).getOrbitParams().getRegime());
+        intent.putExtra("manufacturer", dataset.get(position).getRocket()
+                .getSecondStage().getPayloads().get(0).getManufacturer());
+        intent.putExtra("reference", dataset.get(position).getRocket()
+                .getSecondStage().getPayloads().get(0).getOrbitParams().getReferenceSystem());
+
+
         startActivity(intent);
     }
 }

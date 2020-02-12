@@ -35,7 +35,7 @@ class LaunchAdapter(var launchListener: OnLaunchListener) : RecyclerView.Adapter
     class ViewHolder(itemView: View, var launchListener: OnLaunchListener) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
 
         fun bind(launch: Launch) {
-            val imageUri = launch.getLinks().getMissionPatchSmall();
+            val imageUri = launch.getLinks().getMissionPatchSmall()
             Picasso.get().load(imageUri).fit().into(itemView.rocket_img as ImageView)
             itemView.mission_name.text = launch.missionName
             itemView.rocket_name.text = launch.rocket.rocketName
