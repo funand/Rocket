@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Space</string>
+    <string name="mission_name">Mission Name</string>
+    <string name="rocket_name">Rocket Name</string>
+    <string name="launch_name">Launch Site Name</string>
+    <string name="date_launched">Date of Launch</string>
+    <string name="landing_type">Landing type </string>
+    <string name="regime">Regime </string>
+    <string name="manufacturer">Manufacturer </string>
+    <string name="reference_system">Reference System </string>
+
+</resources>
