@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/rocket_img_two"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="16dp"
+        android:background="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/mission_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/mission_name" />
+
+    <TextView
+        android:id="@+id/rocket_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mission_name_two"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/rocket_name" />
+
+    <TextView
+        android:id="@+id/launch_name_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rocket_name_two"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/launch_name" />
+
+    <TextView
+        android:id="@+id/date_launched"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/launch_name_two"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/date_launched" />
+
+    <TextView
+        android:id="@+id/landing_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_launched"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/landing_type" />
+
+    <TextView
+        android:id="@+id/regime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/landing_type"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/regime" />
+
+    <TextView
+        android:id="@+id/manufacturer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regime"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/manufacturer" />
+
+    <TextView
+        android:id="@+id/reference_system"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/manufacturer"
+        android:layout_toRightOf="@+id/rocket_img_two"
+        android:text="@string/reference_system" />
+
+</RelativeLayout>
