@@ -1,40 +1,44 @@
 package com.example.space.ui
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
-import com.example.space.Models.Launch
 import com.example.space.R
-import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_launch_detail.*
-import kotlinx.android.synthetic.main.launchitems.view.*
 
 class LaunchDetail : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launch_detail)
-        if (intent.hasExtra("missionName")){
-            setLayout()
+
+        if (savedInstanceState == null) {
+            // Create instance of the detail fragment and add it to the activity
+            // using a fragment transaction.
+
+            val arguments = Bundle()
+            arguments.putString("mission_name_two", intent.getStringExtra("mission_name_two"))
+            arguments.putString("rocket", intent.getStringExtra("rocket"))
+            arguments.putString("date", intent.getStringExtra("date"))
+            arguments.putString("regime", intent.getStringExtra("regime"))
+            arguments.putString("manufacturer", intent.getStringExtra("manufacturer"))
+            arguments.putString("reference", intent.getStringExtra("reference"))
+
+            val fragment = LaunchFragment()
+            fragment.arguments = arguments
+            supportFragmentManager.beginTransaction()
+                    .add(R.id.song_detail_containers, fragment)
+                    .commit()
         }
     }
 
-    private fun setLayout() {
-        if(intent.hasExtra("image")){
-            val imageUri = intent.getStringExtra("image")
-            imageUri?.let { image ->
-                Picasso.get().load(image).fit().into(rocket_img_two as ImageView)
+    override fun onOptionsItemSelected(item: MenuItem) =
+            when (item.itemId) {
+                android.R.id.home -> {
+                    navigateUpTo(Intent(this, MainActivity::class.java))
+                    true
+                }
+                else -> super.onOptionsItemSelected(item)
             }
-        }
-        mission_name_two.text = intent.getStringExtra("missionName")
-        rocket_name_two.text = intent.getStringExtra("rocket")
-        date_launched.text = intent.getStringExtra("date")
-        regime.text = intent.getStringExtra("regime")
-        manufacturer.text = intent.getStringExtra("manufacturer")
-        reference_system.text = intent.getStringExtra("reference")
-    }
 }
 
