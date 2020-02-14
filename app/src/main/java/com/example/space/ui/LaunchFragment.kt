@@ -15,12 +15,12 @@ import kotlinx.android.synthetic.main.launch_detail.view.*
  */
 class LaunchFragment() : Fragment() {
 
-    private var mission : String = ""
-    private var rocket : String = ""
-    private var date : String = ""
-    private var regime : String = ""
-    private var manufacturer : String = ""
-    private var reference : String = ""
+    private var mission: String = ""
+    private var rocket: String = ""
+    private var date: String = ""
+    private var regime: String = ""
+    private var manufacturer: String = ""
+    private var reference: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,10 +29,10 @@ class LaunchFragment() : Fragment() {
             if (it.containsKey("mission_name_two")) {
                 mission = getArguments()?.getString("mission_name_two") ?: "mission"
                 rocket = getArguments()?.getString("rocket") ?: "rocket"
-                date = getArguments()?.getString("date")     ?: "date"
-                regime = getArguments()?.getString("regime")   ?: "regime"
-                manufacturer = getArguments()?.getString("manufacturer")   ?: "manufacturer"
-                reference = getArguments()?.getString("reference")    ?: "reference"
+                date = getArguments()?.getString("date") ?: "date"
+                regime = getArguments()?.getString("regime") ?: "regime"
+                manufacturer = getArguments()?.getString("manufacturer") ?: "manufacturer"
+                reference = getArguments()?.getString("reference") ?: "reference"
             }
         }
     }
@@ -47,7 +47,7 @@ class LaunchFragment() : Fragment() {
         R.string.mission_name
         rootView.setBackgroundColor(Color.GRAY)
         mission?.let { missionName -> rootView.mission_name_two.text = "Mission Name: " + missionName }
-        rocket?.let { rocket -> rootView.rocket_name_two.text = "Rocket Name: "+ rocket }
+        rocket?.let { rocket -> rootView.rocket_name_two.text = "Rocket Name: " + rocket }
         date?.let { it -> rootView.date_launched.text = "Date: " + it }
         regime?.let { it -> rootView.regime.text = "Regime: " + it }
         manufacturer?.let { it -> rootView.manufacturer.text = "Manufacturer: " + it }

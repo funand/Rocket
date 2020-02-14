@@ -18,9 +18,7 @@ import com.example.space.viewModel.LaunchViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-//public class MainActivity extends AppCompatActivity implements LaunchAdapter.OnLaunchListener {
-
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     private LaunchViewModel launchViewModel;
     private LaunchAdapter launchAdapter;
@@ -40,7 +38,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void initRecycleView() {
-        dataset= new ArrayList<Launch>();
+        dataset = new ArrayList<Launch>();
         launchAdapter = new LaunchAdapter(this, mTwoPane);
         RecyclerView recyclerView = findViewById(R.id.recycle_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -58,30 +56,4 @@ public class MainActivity extends AppCompatActivity{
         dataset = launchViewModel.getSortedLaunchList(allLaunches);
         launchAdapter.updateDataSet(allLaunches);
     }
-
-
-
-//    @Override
-//    public void onLaunchClick(int position) {
-//        if(mTwoPane){
-//            Log.d("datasetsize::", ""+dataset.size());
-//            Bundle  bundle = new Bundle();
-//            bundle.putString("mission_name_two", dataset.get(position).getMissionName());
-//            bundle.putString("rocket", dataset.get(position).getRocket().getRocketName());
-//            bundle.putString("date", dataset.get(position).getLaunchYear());
-//            LaunchFragment launchFragment = new LaunchFragment();
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.song_detail_containers, launchFragment)
-//                    .addToBackStack(null)
-//                    .commit();
-//        }
-//        else{
-//            Log.d("datasetsize::", ""+dataset.size());
-//            Intent intent = new Intent(this, LaunchDetail.class);
-//            intent.putExtra("mission_name_two", dataset.get(position).getMissionName());
-//            intent.putExtra("rocket", dataset.get(position).getRocket().getRocketName());
-//            intent.putExtra("date", dataset.get(position).getLaunchYear());
-//            startActivity(intent);
-//        }
-//    }
 }

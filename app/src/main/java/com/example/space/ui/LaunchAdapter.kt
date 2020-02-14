@@ -14,35 +14,8 @@ import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.launchitems.view.*
 
 
-//class LaunchAdapter(var launchListener: OnLaunchListener,
-//                    var parentActivity: MainActivity, var mTwoPane : Boolean) : RecyclerView.Adapter<LaunchAdapter.ViewHolder>() {
 class LaunchAdapter(var parentActivity: MainActivity, var mTwoPane: Boolean) : RecyclerView.Adapter<LaunchAdapter.ViewHolder>() {
     private var dataset: List<Launch> = emptyList()
-
-
-//    private val onClickListener: View.OnClickListener
-
-//    init {
-//        onClickListener = View.OnClickListener { v ->
-//            val item = v.tag as DummyContent.DummyItem
-//            if (twoPane) {
-//                val fragment = ItemDetailFragment().apply {
-//                    arguments = Bundle().apply {
-//                        putString(ItemDetailFragment.ARG_ITEM_ID, item.id)
-//                    }
-//                }
-//                parentActivity.supportFragmentManager
-//                        .beginTransaction()
-//                        .replace(R.id.item_detail_container, fragment)
-//                        .commit()
-//            } else {
-//                val intent = Intent(v.context, ItemDetailActivity::class.java).apply {
-//                    putExtra(ItemDetailFragment.ARG_ITEM_ID, item.id)
-//                }
-//                v.context.startActivity(intent)
-//            }
-//        }
-//    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
@@ -94,7 +67,6 @@ class LaunchAdapter(var parentActivity: MainActivity, var mTwoPane: Boolean) : R
         notifyDataSetChanged()
     }
 
-    //    class ViewHolder(itemView: View, var launchListener: OnLaunchListener) : RecyclerView.ViewHolder(itemView), View.OnClickListener {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(launch: Launch) {
@@ -107,19 +79,8 @@ class LaunchAdapter(var parentActivity: MainActivity, var mTwoPane: Boolean) : R
             itemView.rocket_name.text = launch.rocket.rocketName
             itemView.launch_name.text = launch.launchSite.siteName
             itemView.date_launched.text = launch.launchYear
-//            itemView.setOnClickListener(this)
         }
-
-//        override fun onClick(view: View?) {
-//            if (adapterPosition != -1)
-//                launchListener.onLaunchClick(adapterPosition)
-//            else
-//                launchListener.onLaunchClick(0)
-//        }
     }
 
-    interface OnLaunchListener {
-        fun onLaunchClick(position: Int)
-    }
 
 }
