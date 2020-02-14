@@ -12,7 +12,7 @@ class Repository {
 
     var mLaunches = MutableLiveData<List<Launch>>()
 
-    fun getLaunches(){
+    fun getLaunches() {
         val launchesCall = LaunchService.launchApi.listAllLaunches()
         launchesCall.enqueue(object : Callback<List<Launch>> {
             override fun onFailure(call: Call<List<Launch>>, t: Throwable) {

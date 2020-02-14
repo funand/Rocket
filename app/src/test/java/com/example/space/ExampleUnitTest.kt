@@ -40,6 +40,6 @@ class ExampleUnitTest {
         var subject = LaunchLists().getLaunchList()
         subject = launchViewModel.getSortedLaunchList(subject)
 
-        assertEquals(subject.get(1).launchYear.toInt(), 3)
+        assertEquals(subject.get(1).launchYear.toInt(), 2019)
     }
 }
