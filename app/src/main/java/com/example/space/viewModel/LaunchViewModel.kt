@@ -9,7 +9,6 @@ import com.example.space.repository.Repository;
 class LaunchViewModel() : ViewModel() {
     private var repository = Repository()
 
-
     fun getLaunches(): LiveData<List<Launch>> {
         repository.getLaunches()
         return repository.getLaunchList()
