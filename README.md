@@ -1,8 +1,9 @@
 # Rocket  APP by Prince Ikede 
 Tools used: Android, Mix of Java & Kotlin, Multithreading, MutableLiveData, MVVM Architecture, Retrofit, Junit, Mockito, Dependency Injection, Koin Picasso, Livedata, 
 
-Features
 __________________________________________________________________________________________________________________________
+Features
+
 Fragment communication
 Layout view: Master/Detail 
 Unit test for sorting algorithm
@@ -12,9 +13,12 @@ Livedata
 
 __________________________________________________________________________________________________________________________
 Missing: 
+
 RxJAVA / Coroutine 
+
 Progress bar for loading api
-Base Url and api key should have been put into config files
+
+Base Url and api key should be put into config files
 
 __________________________________________________________________________________________________________________________
 API: https://api.spacexdata.com/v3/launches
