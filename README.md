@@ -27,3 +27,5 @@ API: https://api.spacexdata.com/v3/launches
 
 
 Screenshots of differrent layouts, both potrait and landscape(should be added for future reference) 
+
+Remove appending of strings! (due to time constraints)
