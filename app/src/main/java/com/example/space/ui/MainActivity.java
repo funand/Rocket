@@ -1,16 +1,10 @@
 package com.example.space.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-
 import com.example.space.Models.Launch;
 import com.example.space.R;
 import com.example.space.viewModel.LaunchViewModel;
@@ -54,6 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void populateUI(List<Launch> allLaunches) {
         dataset = launchViewModel.getSortedLaunchList(allLaunches);
-        launchAdapter.updateDataSet(allLaunches);
+        launchAdapter.updateDataSet(dataset);
     }
 }

@@ -44,14 +44,13 @@ class LaunchFragment() : Fragment() {
         val rootView: View = inflater.inflate(R.layout.launch_detail,
                 container, false)
 
-        R.string.mission_name
         rootView.setBackgroundColor(Color.GRAY)
-        mission?.let { missionName -> rootView.mission_name_two.text = "Mission Name: " + missionName }
-        rocket?.let { rocket -> rootView.rocket_name_two.text = "Rocket Name: " + rocket }
-        date?.let { it -> rootView.date_launched.text = "Date: " + it }
-        regime?.let { it -> rootView.regime.text = "Regime: " + it }
-        manufacturer?.let { it -> rootView.manufacturer.text = "Manufacturer: " + it }
-        reference?.let { it -> rootView.reference_system.text = "Reference: " + it }
+        mission?.let { missionName -> rootView.mission_name_two.text = missionName }
+        rocket?.let { rocket -> rootView.rocket_name_two.text = rocket }
+        date?.let { it -> rootView.date_launched.text = it }
+        regime?.let { it -> rootView.regime.text = it }
+        manufacturer?.let { it -> rootView.manufacturer.text = it }
+        reference?.let { it -> rootView.reference_system.text = it }
 
         return rootView
     }
