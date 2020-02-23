@@ -8,8 +8,6 @@
     <string name="regime">Regime: </string>
     <string name="manufacturer">Manufacturer: </string>
     <string name="reference_system">Reference System: </string>
-    <string name="potrait">Potrait: </string>
-    <string name="landscape">Landscape: </string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
